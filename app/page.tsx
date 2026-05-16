@@ -3,16 +3,16 @@
 import { useState, useEffect, useRef } from "react";
  
 const reasons = [
-  { num: "01", text: "Por tu sonrisa, que hace que el tiempo se detenga cada vez que la veo." },
-  { num: "02", text: "Porque con solo estar cerca de ti, todo problema parece más pequeño." },
-  { num: "03", text: "Por la manera en que me miras y me haces sentir el hombre más afortunado de la tierra." },
-  { num: "04", text: "Porque me enseñaste lo que significa amar de verdad, sin reservas y sin miedo." },
-  { num: "05", text: "Por ser mi futura esposa, la mujer con quien quiero pasar cada día de mi vida." },
-  { num: "06", text: "Por cada vez que me das la mano sin que yo lo pida, como si supieras exactamente lo que necesito." },
-  { num: "07", text: "Por tu fuerza, que me inspira todos los días a ser mejor versión de mí mismo." },
-  { num: "08", text: "Por los silencios contigo, que me resultan más cómodos que cualquier conversación." },
-  { num: "09", text: "Porque contigo el tiempo ordinario se vuelve extraordinario sin que hagamos nada especial." },
-  { num: "10", text: "Por elegirme a mí, todos los días, y hacer que eso se sienta como el regalo más grande del universo." },
+  { num: "01", text: "Eres una mujer increible y maravillosa." },
+  { num: "02", text: "Mi futura esposa, la mujer con quien quiero pasar cada día de mi vida." },
+  { num: "03", text: "Me gustas muchisimo, me encantas muchisimo,." },
+  { num: "04", text: "Te amo muchisimo." },
+  { num: "05", text: "Eres mi vida entera." },
+  { num: "06", text: "Amo absolutamente todo de ti." },
+  { num: "07", text: "Gracias por estar en mi vida, por permitirme compartir tu vida contigo." },
+  { num: "08", text: "Me haces el hombre mas feliz." },
+  { num: "09", text: "Quiero compartir el resto de mi vida contigo." },
+  { num: "10", text: "Eres mi amor, mi novia, mi vida, mi todo, mi futura esposa, mi vida entera." },
 ];
  
 const vows = [
@@ -21,22 +21,22 @@ const vows = [
   { icon: "✦", text: "Hacerte reír todos los días, incluso en los momentos más ordinarios." },
   { icon: "∞", text: "Elegirte a ti, hoy, mañana, y todos los días que me queden." },
   { icon: "◇", text: "Nunca dejar que te vayas a dormir sin saber cuánto significas para mí." },
-  { icon: "✿", text: "Construir contigo el hogar que los dos merecemos, ladrillo a ladrillo, día a día." },
+  { icon: "✿", text: "Crecer contigo en cada etapa de la vida." },
 ];
  
 const memories = [
-  { emoji: "🌅", title: "La primera vez", text: "Hubo un momento exacto en que supe que eras tú. No lo planeé. Solo lo supe, como se saben las cosas que importan de verdad." },
-  { emoji: "🌧", title: "Los días grises", text: "Los días difíciles contigo son infinitamente mejores que los días perfectos sin ti. Eso lo aprendí y no lo voy a olvidar nunca." },
-  { emoji: "🌙", title: "Las noches", text: "Hay noches en que solo con saber que existes en este mundo, puedo dormir tranquilo. Eso no lo hace nadie más. Solo tú." },
-  { emoji: "☀️", title: "Las mañanas", text: "Cada mañana que empieza contigo es una razón de sobra para estar agradecido de todo lo que pasó para que pudiéramos encontrarnos." },
+  { emoji: "💘", title: "Nuestra historia", text: "Nuestra historia de cómo nos conocimos es muy genuina y hermosa. Es increíble que tenga que agradecerle a Fortnite por haber hecho posible ese primer encuentro, por habernos emparejado en aquella partida que terminó siendo el inicio de algo tan especial. Desde ahí comenzó todo lo que hemos compartido y vivido juntos." },
+  { emoji: "👩🏻‍❤️‍💋‍👨🏻", title: "Nuestros planes a futuro", text: "Que termines tu carrera, casarnos, vivir juntos y tener muchos gatitos" },
+  { emoji: "💘📞", title: "Nuestras llamadas y videollamadas", text: "Me encanta hablar contigo, ya sea por mensaje, llamada o videollamada. Me gusta lo mucho que podemos durar hablando de todo, de cualquier cosa, ver películas, jugar o simplemente estar juntos hablando de la vida. Cada conversación contigo se siente especial." },
+  { emoji: "💌", title: "Cosas que nos unen", text: "Me encanta conocer tus gustos, ya sea la música que escuchas, los libros que te llaman la atención o esas cosas que simplemente te gustan de ti. También me gusta poder compartir contigo mis gustos y descubrir poco a poco lo que tenemos en común, y lo que no, aprenderlo juntos. Es bonito ver cómo, con el tiempo, vamos conectando más, entendiendo mejor lo que nos gusta y haciendo de eso algo nuestro, y que se vaya a la goma el higado encebolla" },
 ];
  
 const qualities = [
-  { label: "Tu fuerza" },
-  { label: "Tu ternura" },
-  { label: "Tu inteligencia" },
-  { label: "Tu sonrisa" },
-  { label: "Tu amor" },
+  { label: "Eres esa persona con la que puedo ser yo mismo, con la que cada conversación se siente importante y cada momento, por pequeño que sea, se vuelve significativo." },
+  { label: "Eres alguien que me inspira, que me motiva y que sin darte cuenta ha cambiado la forma en la que veo muchas cosas." },
+  { label: "Y aunque hoy te tengo como mi novia, en mi corazón y mente tengo muy claro algo que quiero que seas tú en todo lo que viene, que algún día seas mi futura esposa, con quien quiero compartirlo absolutamente todo." },
+  { label: "Eres todo la persona que quiero en mi vida, hoy mañana y siempre." },
+  { label: "Porque contigo quiero todo, siempre." },
 ];
  
 const TOTAL = 7;
@@ -312,14 +312,14 @@ function PageCarta({
           fontFamily: "'Cormorant Garamond', serif",
           fontSize: "clamp(24px, 7vw, 32px)", fontWeight: 300,
           fontStyle: "italic", color: "var(--rose-deep)", lineHeight: 1.2,
-        }}>Mi amor, mi mujer,<br />mi todo</h2>
+        }}>Mi amor, mi mujer, mi futura esposa<br />mi todo, mi vida entera</h2>
       </div>
  
       <div style={{ padding: "32px 26px 8px" }}>
         {[
-          <>Quería escribirte esto porque las palabras que te digo todos los días a veces no alcanzan para decirte <em style={{ color: "var(--rose)", fontStyle: "italic" }}>lo enorme que es lo que siento por ti.</em></>,
-          <>Eres mi novia, mi mujer, mi compañera y mi hogar. Eres la persona con quien quiero despertar cada mañana que me quede y a quien quiero tener de la mano cuando sea viejo. <em style={{ color: "var(--rose)", fontStyle: "italic" }}>No hay nadie más. Solo tú.</em></>,
-          <>A veces me detengo en medio del día, sin ninguna razón, y pienso en ti. En tu voz. En cómo te ríes. En cómo me haces sentir que el mundo está bien cuando en realidad solo estás tú siendo tú.</>,
+          <>Este detalle es para ti, mi amor para la mujer que llegó a mi vida a llenarla de felicidad, calma y momentos que jamás quiero olvidar.  <em style={{ color: "var(--rose)", fontStyle: "italic" }}>Agradezco profundamente a la vida por haberte puesto en mi camino y por poder compartir contigo algo tan bonito.</em></>,
+          <>Me haces sentir el hombre más feliz del mundo. Eres la persona que ilumina cada uno de mis días, la que con un mensaje, una llamada, una videollamada puede cambiar por completo mi ánimo y hacer que todo se sienta mejor. Día con día me haces inmensamente feliz, y no imaginas lo mucho que significa para mí tenerte como mi novia. <em style={{ color: "var(--rose)", fontStyle: "italic" }}>Pero más hermoso aún es saber, sentir y soñar que algún día serás mi futura esposa, la mujer con la que quiero construir recuerdos, cumplir sueños y compartir toda una vida. Eres lo más hermoso, valioso y especial que tengo en mi vida.</em></>,
+          <>Me encanta lo bonito que se siente lo nuestro, la manera tan especial en la que conectamos y cómo todo contigo fluye de una forma tan natural y sincera. Disfruto muchísimo cada momento contigo, cada conversación, cada tema, cada risa, cada ocurrencia, porque sin importar de qué estemos hablando, contigo todo se siente diferente, más bonito, más real.</>,
         ].map((text, i) => (
           <div key={i}>
             <p style={{
@@ -336,7 +336,7 @@ function PageCarta({
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(18px, 5vw, 22px)", fontStyle: "italic",
             color: "var(--rose-deep)", lineHeight: 1.65,
-          }}>"No exageró nadie que dijo que el amor cambia todo. Desde que estás en mi vida, todo tiene más sentido."</p>
+          }}>Me encanta la paz que siento cuando estoy contigo, la felicidad tan sincera que provocas en mí y la manera tan hermosa en la que, con pequeños detalles, haces que mis días tengan mucho más sentido. Disfruto cada palabra, cada momento, cada risa y cada instante que compartimos, porque estar contigo se ha convertido en una de las cosas más bonitas, especiales y valiosas que tengo en mi vida.</p>
         </div>
  
         <p style={{
@@ -378,12 +378,12 @@ function PageRazones({
   return (
     <div style={{ background: "#fff", position: "relative", zIndex: 1 }}>
       <div style={{ padding: "36px 26px 20px", textAlign: "center", background: "var(--cream)", borderBottom: "1px solid var(--rose-light)" }}>
-        <div className="eyebrow" style={{ color: "var(--text-muted)" }}>la lista que no tiene fin</div>
+        <div className="eyebrow" style={{ color: "var(--text-muted)" }}>Te adoro</div>
         <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 80, fontWeight: 300, color: "var(--rose-pale)", lineHeight: 1, marginBottom: -14 }}>∞</div>
         <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(22px, 6vw, 28px)", fontStyle: "italic", color: "var(--rose-deep)", fontWeight: 300 }}>
-          razones por las que te amo
+          Para ti mi amor.
         </h2>
-        <p style={{ fontSize: 13, color: "var(--text-muted)", marginTop: 8, fontStyle: "italic" }}>(estas son solo las primeras 10)</p>
+        <p style={{ fontSize: 13, color: "var(--text-muted)", marginTop: 8, fontStyle: "italic" }}>(Mi futura esposa, Valeria Gildanny)</p>
       </div>
  
       <div style={{ padding: "20px 20px 8px" }}>
@@ -394,7 +394,7 @@ function PageRazones({
           </div>
         ))}
         <div style={{ textAlign: "center", padding: "18px 0 12px", fontFamily: "'Cormorant Garamond', serif", fontSize: 18, fontStyle: "italic", color: "var(--text-muted)" }}>
-          y podría seguir para siempre… ♥
+          TE AMO MI AMOR
         </div>
       </div>
  
@@ -417,15 +417,15 @@ function PageRecuerdos({
   return (
     <div style={{ background: "var(--cream)", position: "relative", zIndex: 1 }}>
       <div style={{ background: "var(--rose-pale)", padding: "34px 26px 24px", textAlign: "center", borderBottom: "1px solid var(--rose-light)" }}>
-        <div className="eyebrow" style={{ color: "var(--rose)" }}>los momentos que guardo</div>
+        <div className="eyebrow" style={{ color: "var(--rose)" }}>Mi novia</div>
         <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(22px, 6vw, 28px)", fontWeight: 300, fontStyle: "italic", color: "var(--rose-deep)" }}>
-          Los que viven en mi memoria
+          3 de Mayo 2026
         </h2>
       </div>
  
       <div style={{ padding: "28px 22px 8px" }}>
         <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(17px, 4.5vw, 20px)", fontWeight: 300, color: "#3a1a26", lineHeight: 1.85, marginBottom: 24, textAlign: "center" }}>
-          Hay momentos que el tiempo no me va a quitar. Momentos tuyos que cargo conmigo a todas partes.
+          El dia que te hiciste oficialmente mi novia
         </p>
  
         {memories.map((m, i) => (
@@ -438,7 +438,7 @@ function PageRecuerdos({
  
         <div className="quote-block">
           <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(18px, 5vw, 22px)", fontStyle: "italic", color: "var(--rose-deep)", lineHeight: 1.65 }}>
-            "Cuando estoy contigo el tiempo pasa demasiado rápido. Y cuando no estás, va demasiado lento. Solo tú haces eso."
+            "Gracias por todas las enseñanzas que me das. Eres una persona muy interesante, y contigo aprendo muchísimas cosas día con día. Eres una mujer muy inteligente e increíble, y cada día admiro más la forma en la que piensas, ves la vida y compartes lo que sabes conmigo."
           </p>
         </div>
       </div>
@@ -465,15 +465,14 @@ function PageCualidades({
   return (
     <div style={{ background: "#fff", position: "relative", zIndex: 1 }}>
       <div style={{ background: "#fff", padding: "34px 26px 24px", textAlign: "center", borderBottom: "1px solid var(--rose-light)" }}>
-        <div className="eyebrow" style={{ color: "var(--text-muted)" }}>lo que más admiro de ti</div>
+        <div className="eyebrow" style={{ color: "var(--text-muted)" }}>Mi todo</div>
         <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(22px, 6vw, 28px)", fontWeight: 300, fontStyle: "italic", color: "var(--rose-deep)" }}>
-          Todo lo que eres
-        </h2>
+Lo que eres para mí”        </h2>
       </div>
  
       <div style={{ padding: "28px 26px 8px" }}>
         <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(17px, 4.5vw, 20px)", fontWeight: 300, color: "#3a1a26", lineHeight: 1.85, marginBottom: 30 }}>
-          No hay una sola parte de ti que no me enamore. Pero si tuviera que medirlo…
+          Eres mi felicidad, mi tranquilidad y una de las razones más bonitas de mis días. Desde que llegaste, todo se siente más especial, más ligero y más bonito.
         </p>
  
         {qualities.map((q, i) => (
@@ -500,13 +499,13 @@ function PageCualidades({
         ))}
  
         <div style={{ marginTop: 32, textAlign: "center", fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(22px, 6vw, 28px)", fontStyle: "italic", color: "var(--rose-deep)", lineHeight: 1.3 }}>
-          <span className="shimmer">Perfecta en todos los sentidos.<br />Perfecta para mí.</span>
+          <span className="shimmer">Te amo muchisimo mi amor, gracias por tanto..<br />Lo eres todo para mi.</span>
         </div>
  
         <div className="divider" style={{ marginTop: 28 }}><span>♥</span></div>
  
         <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(17px, 4.5vw, 20px)", fontWeight: 300, color: "#3a1a26", lineHeight: 1.85, textAlign: "center", marginBottom: 8 }}>
-          No busco a nadie perfecto. Te busco a ti. Que eres <em style={{ color: "var(--rose)", fontStyle: "italic" }}>exactamente lo que necesito.</em>
+           <em style={{ color: "var(--rose)", fontStyle: "italic" }}>Te amo mi amor, continua a la siguiente pagina, esto aun no acaba.</em>
         </p>
       </div>
  
@@ -530,9 +529,9 @@ function PagePromesas({
   return (
     <div style={{ background: "var(--rose-deep)", position: "relative", zIndex: 1 }}>
       <div style={{ padding: "36px 26px 24px", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,.12)" }}>
-        <div className="eyebrow" style={{ color: "var(--rose-light)" }}>mis votos para ti</div>
+        <div className="eyebrow" style={{ color: "var(--rose-light)" }}>Para ti</div>
         <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(24px, 6.5vw, 30px)", fontWeight: 300, fontStyle: "italic", color: "#fff" }}>
-          Lo que te juro cada día
+          Lo que te prometo cada día
         </h2>
       </div>
  
