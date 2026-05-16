@@ -45,8 +45,7 @@ export default function LoveLetter() {
   const [cur, setCur] = useState(0);
   const [animKey, setAnimKey] = useState(0);
  
-  const goTo = (n) => {
-    if (n < 0 || n >= TOTAL) return;
+const goTo = (n: number) => {    if (n < 0 || n >= TOTAL) return;
     window.scrollTo({ top: 0, behavior: "instant" });
     setCur(n);
     setAnimKey((k) => k + 1);
@@ -180,8 +179,14 @@ function FloatingHearts() {
     </div>
   );
 }
- 
-function TopNav({ cur, goTo }) {
+ function TopNav({
+  cur,
+  goTo,
+}: {
+  cur: number;
+  goTo: (n: number) => void;
+}) {
+
   const dark = cur === 0 || cur === 5;
   return (
     <div className={`top-nav ${dark ? "dark" : "light"}`}>
@@ -201,8 +206,11 @@ function TopNav({ cur, goTo }) {
   );
 }
  
-/* PAGE 1 */
-function PagePortada({ onNext }) {
+function PagePortada({
+  onNext,
+}: {
+  onNext: () => void;
+}) {
   return (
     <div style={{
       minHeight: "92svh", display: "flex", flexDirection: "column",
@@ -286,8 +294,13 @@ function PagePortada({ onNext }) {
   );
 }
  
-/* PAGE 2 */
-function PageCarta({ onPrev, onNext }) {
+function PageCarta({
+  onPrev,
+  onNext,
+}: {
+  onPrev: () => void;
+  onNext: () => void;
+}) {
   return (
     <div style={{ background: "var(--cream)", position: "relative", zIndex: 1 }}>
       <div style={{
@@ -355,8 +368,13 @@ function PageCarta({ onPrev, onNext }) {
   );
 }
  
-/* PAGE 3 */
-function PageRazones({ onPrev, onNext }) {
+function PageRazones({
+  onPrev,
+  onNext,
+}: {
+  onPrev: () => void;
+  onNext: () => void;
+}) {
   return (
     <div style={{ background: "#fff", position: "relative", zIndex: 1 }}>
       <div style={{ padding: "36px 26px 20px", textAlign: "center", background: "var(--cream)", borderBottom: "1px solid var(--rose-light)" }}>
@@ -389,8 +407,13 @@ function PageRazones({ onPrev, onNext }) {
   );
 }
  
-/* PAGE 4 */
-function PageRecuerdos({ onPrev, onNext }) {
+function PageRecuerdos({
+  onPrev,
+  onNext,
+}: {
+  onPrev: () => void;
+  onNext: () => void;
+}) {
   return (
     <div style={{ background: "var(--cream)", position: "relative", zIndex: 1 }}>
       <div style={{ background: "var(--rose-pale)", padding: "34px 26px 24px", textAlign: "center", borderBottom: "1px solid var(--rose-light)" }}>
@@ -429,8 +452,13 @@ function PageRecuerdos({ onPrev, onNext }) {
   );
 }
  
-/* PAGE 5 */
-function PageCualidades({ onPrev, onNext }) {
+function PageCualidades({
+  onPrev,
+  onNext,
+}: {
+  onPrev: () => void;
+  onNext: () => void;
+}) {
   const [visible, setVisible] = useState(false);
   useEffect(() => { const t = setTimeout(() => setVisible(true), 200); return () => clearTimeout(t); }, []);
  
@@ -455,7 +483,18 @@ function PageCualidades({ onPrev, onNext }) {
               <span style={{ fontSize: 13, color: "var(--rose)", fontWeight: 500 }}>∞</span>
             </div>
             <div className="quality-bar-track">
-              {visible && <div className="quality-bar-fill" style={{ "--w": "100%", "--delay": `${i * 0.12}s`, width: "100%" }} />}
+              {visible && (
+  <div
+    className="quality-bar-fill"
+    style={
+      {
+        "--w": "100%",
+        "--delay": `${i * 0.12}s`,
+        width: "100%",
+      } as React.CSSProperties
+    }
+  />
+)}
             </div>
           </div>
         ))}
@@ -481,7 +520,13 @@ function PageCualidades({ onPrev, onNext }) {
 }
  
 /* PAGE 6 */
-function PagePromesas({ onPrev, onNext }) {
+function PagePromesas({
+  onPrev,
+  onNext,
+}: {
+  onPrev: () => void;
+  onNext: () => void;
+}) {
   return (
     <div style={{ background: "var(--rose-deep)", position: "relative", zIndex: 1 }}>
       <div style={{ padding: "36px 26px 24px", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,.12)" }}>
@@ -528,8 +573,11 @@ function PagePromesas({ onPrev, onNext }) {
   );
 }
  
-/* PAGE 7 */
-function PageCierre({ onPrev }) {
+function PageCierre({
+  onPrev,
+}: {
+  onPrev: () => void;
+}) {
   return (
     <div style={{ minHeight: "92svh", display: "flex", flexDirection: "column", background: "var(--cream)", position: "relative", zIndex: 1 }}>
       <div style={{ background: "var(--rose-pale)", padding: "48px 28px 36px", textAlign: "center", borderBottom: "1px solid var(--rose-light)" }}>
