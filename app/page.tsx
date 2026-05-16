@@ -262,7 +262,7 @@ function PagePortada({
         color: "rgba(255,255,255,.42)", lineHeight: 1.75,
         marginBottom: 16, maxWidth: 280,
       }}>
-        Ábrela cuando quieras recordar cuánto te amo. Que nunca lo olvides.
+        Esta carta es para ti mi amor, con mucho amor y cariño.
       </p>
  
       <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 44 }}>
